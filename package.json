@@ -1,0 +1,22 @@
+{
+    "name": "pieshop",
+    "version":"0.0.1",
+    "description": "A javascript interface for Tastypie supporting Django-style querying",
+    "keywords": [ 
+        "tastypie",
+        "resource",
+        "remote",
+        "django"
+    ],
+    "author":"Cody Soyland",
+    "contributors":["Chris Dickinson"],
+    "directories": {"lib": "./lib" },
+    "main": "./lib/pieshop.main",
+    "bin":{
+        "pieshop-compile":"./bin/pieshop-compile"
+    },
+    "license": [
+        "New BSD License"
+    ]
+}
+
