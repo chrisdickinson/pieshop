@@ -46,8 +46,8 @@ Example usage
 
 testing
 =======
-You should probably have a working copy of (node.js)[http://nodejs.org/], (npm)[http://github.com/isaacs/npm],
-and (jsmin)[http://www.crockford.com/javascript/jsmin.html].
+You should probably have a working copy of [node.js](http://nodejs.org/), [npm](http://github.com/isaacs/npm),
+and [jsmin](http://www.crockford.com/javascript/jsmin.html).
 
     git clone http://github.com/codysoyland/pieshop.git
     cd pieshop
