@@ -4,6 +4,8 @@ Note = pieshop.resource({
         return this.slug.toUpperCase();
     }
 });
+pieshop.settings.set_addon('backend', 'pieshop.backends:TastyPieBackend');
+pieshop.settings.set_addon('transport', 'pieshop.transports:jQueryAjaxTransport');
 
 test('resource-basic', function () {
     ok(Note.prototype.resource_uri == '/api/v1/notes/', 'resource URI intact');
