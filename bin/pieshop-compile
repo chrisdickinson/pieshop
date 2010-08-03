@@ -2,7 +2,7 @@
 
 var path = require('path'),
     fs = require('fs'),
-    lib = path.join(path.dirname(fs.realpathSync(__filename)), '../../lib'),
+    lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib'),
     files = ["namespace.js","pieshop.fields.js","pieshop.settings.js","pieshop.backends.js","pieshop.transports.js","pieshop.core.js"],
     output = [],
     full_output = null,
