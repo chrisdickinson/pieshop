@@ -1,14 +1,28 @@
 Note = pieshop.resource({
-    'resource_uri': '/api/v1/notes/',
     'slug_uppercase': function() {
         return this.slug.toUpperCase();
+    },
+    'Meta': {
+        'resource_uri': '/api/v1/notes/'
+    }
+});
+
+var fields = pieshop.fields;
+var DefinedNote = pieshop.resource({
+    title: fields.CharField({'max_length':255}),
+    slug: fields.CharField({'max_length':50}),
+    content: fields.TextField(),
+    created: fields.DateTimeField({'default_value':function() { return new Date(); }}),
+    updated: fields.DateTimeField({'default_value':function() { return new Date(); }}),
+    Meta:{
+        'resource_uri': '/api/v1/notes/'
     }
 });
 
 test('resource-basic', function () {
-    ok(Note.prototype.resource_uri == '/api/v1/notes/', 'resource URI intact');
+    ok(Note.prototype._meta.opts.resource_uri == '/api/v1/notes/', 'resource URI intact');
     note = new Note({'content': 'This new API rocks da house!'});
-    ok(note.resource_uri == '/api/v1/notes/', 'resource api intact in instance');
+    ok(note._meta.opts.resource_uri == '/api/v1/notes/', 'resource api intact in instance');
     ok(note.content == 'This new API rocks da house!', 'note content preserved');
 });
 
